@@ -1,0 +1,15 @@
+type User{
+    id: ID
+    fullname: String
+    age: Int
+}
+
+type Query{
+    getAllUsers:[User]
+    getUserById(id: ID):User
+    getUserYoungerThan(age: Int):[User]
+}
+
+type Mutation{
+    deleteUser(id: ID):User
+}
